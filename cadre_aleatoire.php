@@ -1,3 +1,8 @@
+<html>
+  <head>
+    <title>PHP-cadre-aleatoire</title>
+  </head>
+  <body>
 <?php
 header('Cache-Control: no-cache');
 $imgs = array(
@@ -9,3 +14,5 @@ $imgs = array(
 $img_id = mt_rand(0,(count($imgs)-1));
 header('Location: '.$imgs[$img_id]);
 ?>
+  </body>
+</html>
