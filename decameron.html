@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html {block:English}lang="en"{/block:English}>
+
+<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/eznt7u3/eF9olq25h/stylesheet.css" charset="utf-8"/>
+
+
+    <head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="text:Font Size" content="9px"/>
+<meta name="color:Text" content="#888"/>
+<meta name="color:Background" content="#fff"/>
+<meta name="color:Post" content="#fff"/>
+<meta name="color:Links" content="#000"/>
+<meta name="color:Hover" content="#ccc"/>
+<meta name="color:Permalink" content="#000"/>
+<meta name="color:Permalink Background" content="#fff"/>
+<meta name="image:Background" content=""/>
+
+
+
+        
+        <link rel="icon" href="{Favicon}" type="image/gif">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+        
+        <title>{Title}</title>
+
+
+    </head>
+
+<style type="text/css">
+
+body {
+    font-family: 'decatestregular';
+    font-size: 20px;
+
+}
+
+h1 {
+    horizontal-align: center;
+    
+}
+
+#description {
+
+}
+
+ul {
+    list-style-type: none;
+    
+}
+
+#posts {
+    
+}
+
+#posttext {
+    
+}
+
+.postphoto {
+    position:relative;
+    
+}
+
+#cadre {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width: 500px;
+    height:344px;
+
+}
+
+#caption {
+    
+}
+
+#postpanorama {
+    
+}
+
+</style>
+    <body>
+        <h1>« FAREW3\, 8795 E4PI=É | »</h1>
+
+        {block:Description}
+            <p id="description">{Description}</p>
+        {/block:Description}
+
+        <ul id="posts">
+            {block:Posts}{block:Text}
+                    <li class="posttext">
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}{Body}
+                    </li>
+                {/block:Text}{block:Photo}
+                    <li class="postphoto">
+                        <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                        <img id="cadre" src="http://ohpla.github.io/decameron/blob/master/cadre_aleatoire.php"/>
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Photo}{block:Panorama}
+                    <li class="postpanorama">
+                        {LinkOpenTag}
+                            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                        {LinkCloseTag}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Panorama}{block:Photoset}
+                    <li class="postphotoset">
+                        {Photoset-500}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Photoset}{block:Quote}
+                    <li class="postquote">
+                        "{Quote}"
+
+                        {block:Source}
+                            <div class="source">{Source}</div>
+                        {/block:Source}
+                    </li>
+                {/block:Quote}{block:Link}
+                    <li class="postlink">
+                        <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                    </li>
+                {/block:Link}{block:Chat}
+                    <li class="postchat">
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}{Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+                    </li>
+                {/block:Chat}{block:Video}
+                    <li class="postvideo">
+                        {Video-500}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Video}{block:Audio}
+                    <li class="postaudio">
+                        {AudioEmbed}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                {/block:Audio}{/block:Posts}
+        </ol>
+
+        <p id="footer">
+            {block:PreviousPage}
+                <a href="{PreviousPage}">&#171; Previous</a>
+            {/block:PreviousPage}{block:NextPage}
+                <a href="{NextPage}">Next &#187;</a>
+            {/block:NextPage}
+
+            <a href="/archive">Archive</a>
+        </p>
+    </body>
+</html>
